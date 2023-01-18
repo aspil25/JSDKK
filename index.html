@@ -154,8 +154,8 @@
    function acquireTokenRedirectAndcallYammerAPI() {
         //Always start with acquireTokenSilent to obtain a token in the signed in user from cache
         myMSALObj.acquireTokenSilent(requestObj).then(function (tokenResponse) {
-            callYammerAPI(yammerConfig.yammerUrl, tokenResponse.accessToken, "v1/users/current.json");
-            // callYammerAPI(yammerConfig.yammerUrl, tokenResponse.accessToken, "users.json");
+            callYammerAPI(yammerConfig.yammerUrl, tokenResponse.accessToken, "users/current.json");
+           // callYammerAPI(yammerConfig.yammerUrl, tokenResponse.accessToken, "users.json");
             // callYammerAPI(yammerConfig.yammerUrl, tokenResponse.accessToken, "users/by_email.json?email="+emailId);
             // callYammerAPI(yammerConfig.yammerUrl, tokenResponse.accessToken, "users/in_group/"+groupId+".json");
             // callYammerAPI(yammerConfig.yammerUrl, tokenResponse.accessToken, "users/liked_message/"+messageId+".json");
